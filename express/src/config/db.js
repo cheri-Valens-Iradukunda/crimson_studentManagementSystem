@@ -15,7 +15,8 @@ dotenv.config();
 const pool = new Pool({
   connectionString: process.env.DATABASE_URI,
   ssl: true,
-  connectionTimeoutMillis: 20000,
+  connectionTimeoutMillis: 20000, 
+  // this is the time of request must await after the time will be the timeout even if the request is not being executing in process
 });
 
 
